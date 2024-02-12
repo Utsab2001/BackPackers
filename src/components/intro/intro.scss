@@ -1,0 +1,48 @@
+@import "../../global.scss";
+
+.intro{
+    color: orange;
+    background-color: $mainColor;
+    display: flex;
+    .left{
+        flex:50;
+        // background-color: blueviolet;
+        
+        .imageContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 500px;
+            }
+        }
+    }
+    .right{
+        flex: 50;
+        overflow-y: hidden;
+        position: relative;
+        .wrapper{
+            height: 100%;
+            width: 100%;
+            // background-color: bisque;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1{
+                font-size: 50px;
+                margin: 10px 0;
+            }
+            h2{
+                font-size: 35px;
+            }
+            h3{
+                font-size: 30px;
+                span{
+                    color: orangered;
+                }
+            }
+        }
+    }
+}

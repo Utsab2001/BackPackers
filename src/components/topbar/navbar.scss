@@ -1,0 +1,87 @@
+@import "../../global.scss";
+* {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  //   padding: 0%;
+  //   margin: 0%;
+}
+.navbar {
+  width: 100%;
+  height: 70px;
+  padding: 10px 30px;
+  color: white;
+  background-color: $mainColor;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 1s ease;
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        font-size: 30px;
+        font-weight: 500;
+        text-decoration: none;
+        color: inherit;
+        margin-right: 40px;
+
+        span {
+          color: orange;
+          border-radius: 10%;
+          padding: 1px 5px;
+        }
+      }
+    }
+
+    .right {
+      .hamburger {
+        width: 32px;
+        height: 27px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        &:hover{
+          color: orange;
+        }
+
+        span {
+          width: 100%;
+          height: 4px;
+          background-color: white;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
+      }
+    }
+  }
+  &.active {
+    color: white;
+    background-color: $mainColor;
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+                    background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
